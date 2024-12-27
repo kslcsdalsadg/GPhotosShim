@@ -12,23 +12,18 @@ android {
     def localProperties = new Properties()
     localProperties.load(new FileInputStream(rootProject.file("local.properties")))
 
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId 'com.google.android.apps.photos'
         minSdkVersion 29
-        targetSdkVersion 34
-        versionCode 7
-        versionName "1.2.2"
+        targetSdkVersion 35
+        versionCode 8
+        versionName "1.2.3"
     }
 
     signingConfigs {
         release {
-            storeFile file(localProperties["RELEASE_STORE_FILE"])
-            storePassword localProperties["RELEASE_STORE_PASSWORD"]
-            keyAlias localProperties["RELEASE_KEY_ALIAS"]
-            keyPassword localProperties["RELEASE_KEY_PASSWORD"]
-
             enableV3Signing = true
             enableV4Signing = true
         }

@@ -65,7 +65,7 @@ class MainActivity : Activity() {
         // If the URI is not pending anymore we send an implicit intent
         // so you can now handle the image with any gallery you want
         val intent = Intent()
-        intent.action = Intent.ACTION_VIEW
+        intent.action = MediaStore.ACTION_REVIEW
         intent.setDataAndType(uri, "image/*")
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
